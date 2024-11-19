@@ -43,7 +43,6 @@ ApplicationWindow {
         anchors.centerIn: parent
         width: Window.width
         height: Window.height
-        scale: Window.scale
 
 	ColumnLayout {
 		anchors.fill: parent
@@ -53,7 +52,7 @@ ApplicationWindow {
 			Layout.fillHeight: true
 			Layout.alignment: Qt.AlignHCenter
 			Image {
-				source: './images/HMI_HVAC_Fan_Icon.svg'
+				source: 'qrc:/images/HMI_HVAC_Fan_Icon.svg'
 			}
 			Item {
 				width: 1080 * 0.8
@@ -100,8 +99,8 @@ ApplicationWindow {
 				Layout.fillWidth: true
 				spacing: 20
 				ToggleButton {
-					onImage: './images/HMI_HVAC_Active.svg'
-					offImage: './images/HMI_HVAC_Inactive.svg'
+					onImage: 'qrc:/images/HMI_HVAC_Active.svg'
+					offImage: 'qrc:/images/HMI_HVAC_Inactive.svg'
 					Label {
 						anchors.centerIn: parent
 						color: parent.checked ? '#00ADDC' : '#848286'
@@ -113,8 +112,8 @@ ApplicationWindow {
 					}
 				}
 				ToggleButton {
-					onImage: './images/HMI_HVAC_Active.svg'
-					offImage: './images/HMI_HVAC_Inactive.svg'
+					onImage: 'qrc:/images/HMI_HVAC_Active.svg'
+					offImage: 'qrc:/images/HMI_HVAC_Inactive.svg'
 					Label {
 						anchors.centerIn: parent
 						color: parent.checked ? '#00ADDC' : '#848286'
@@ -126,8 +125,8 @@ ApplicationWindow {
 					}
 				}
 				ToggleButton {
-					onImage: './images/HMI_HVAC_Circulation_Active.svg'
-					offImage: './images/HMI_HVAC_Circulation_Inactive.svg'
+					onImage: 'qrc:/images/HMI_HVAC_Circulation_Active.svg'
+					offImage: 'qrc:/images/HMI_HVAC_Circulation_Inactive.svg'
 					onCheckedChanged: {
 						console.debug('Circulation', checked)
 					}
@@ -157,8 +156,8 @@ ApplicationWindow {
 			Repeater {
 				model: ['AirDown', 'AirUp', 'AirRight', 'Rear', 'Front']
 				ToggleButton {
-					onImage: './images/HMI_HVAC_%1_Active.svg'.arg(model.modelData)
-					offImage: './images/HMI_HVAC_%1_Inactive.svg'.arg(model.modelData)
+					onImage: 'qrc:/images/HMI_HVAC_%1_Active.svg'.arg(model.modelData)
+					offImage: 'qrc:/images/HMI_HVAC_%1_Inactive.svg'.arg(model.modelData)
 					onCheckedChanged: {
 						console.debug(model.modelData, checked)
 					}

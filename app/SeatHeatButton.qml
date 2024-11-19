@@ -33,13 +33,13 @@ Item {
         anchors.centerIn: parent
         Image {
             id: chair
-            source: './images/HMI_HVAC_%1_Chair_OFF.svg'.arg(root.side)
+            source: 'qrc:/images/HMI_HVAC_%1_Chair_OFF.svg'.arg(root.side)
             states: [
                 State {
                     when: root.headLevel > 0
                     PropertyChanges {
                         target: chair
-                        source: './images/HMI_HVAC_%1_Chair_ON.svg'.arg(root.side)
+                        source: 'qrc:/images/HMI_HVAC_%1_Chair_ON.svg'.arg(root.side)
                     }
                 }
             ]
@@ -48,20 +48,20 @@ Item {
             id: indicator
             width: 178
             height: 18
-            source: './images/HMI_HVAC_ChairIndicator_OFF.svg'
+            source: 'qrc:/images/HMI_HVAC_ChairIndicator_OFF.svg'
             states: [
                 State {
                     when: root.headLevel === 1
                     PropertyChanges {
                         target: indicator
-                        source: './images/HMI_HVAC_ChairIndicator_One.svg'
+                        source: 'qrc:/images/HMI_HVAC_ChairIndicator_One.svg'
                     }
                 },
                 State {
                     when: root.headLevel === 2
                     PropertyChanges {
                         target: indicator
-                        source: './images/HMI_HVAC_ChairIndicator_Two.svg'
+                        source: 'qrc:/images/HMI_HVAC_ChairIndicator_Two.svg'
                     }
                 }
             ]
